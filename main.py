@@ -7,6 +7,7 @@ from dc_bot import client
 import os
 from util import *
 from config import *
+import patoolib
 
 
 class CaptureTrayIcon(QtWidgets.QSystemTrayIcon):
@@ -27,6 +28,13 @@ class CaptureTrayIcon(QtWidgets.QSystemTrayIcon):
 
 
 if __name__ == "__main__":
+    if(not "ffmpeg.exe" in os.listdir()):
+        patoolib.extract_archive("ffmpeg.rar", outdir=os.getcwd())
+        os.remove("ffmpeg.rar")
+    else:
+        print("ffmpeg.exe already exists in cwd.")
+
+
     try:
         os.remove("write.mp4")
         os.remove("video.mkv")

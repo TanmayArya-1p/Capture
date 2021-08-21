@@ -1,4 +1,3 @@
-from Capture.client.config import DC_Client_Secret
 import discord 
 from discord.ext import commands
 from util import *
@@ -11,7 +10,8 @@ import json
 from util import *
 from win32api import GetSystemMetrics
 from oauth_server import Authorize
-from config import Bot_Secret,DC_Client_Secret
+
+
 
 valid_modes = ["STANDARD","GRAYSCALE" , "FASTPACE" , "SLOWPACE"]
 
