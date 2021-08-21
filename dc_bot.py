@@ -30,8 +30,11 @@ async def record(ctx,mode):
         while(r.running):
             pass
         time.sleep(5)
-        await ctx.send(f"{ctx.author.mention} ,Captured Video:",file=discord.File("write.mp4"))
-        os.remove("write.mp4")
+        try:
+            await ctx.send(f"{ctx.author.mention} ,Captured Video:",file=discord.File("write.mp4"))
+            os.remove("write.mp4")
+        except:
+            pass
         os.remove("video.mkv")
     else:
         await ctx.channel.send(f"{ctx.author.mention} ,`{mode}` is not a valid mode.Valid modes are : `{valid_modes}`.")

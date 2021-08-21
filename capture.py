@@ -67,14 +67,16 @@ class Recorder:
                 cv2.imshow("Capture - Preview", frame)
                 self.out.write(frame)
 
-            if cv2.waitKey(1) == ord('q') or not self.running:
+            key = cv2.waitKey(1)
+            if (key in [ord('`'),ord("~")]) or not self.running:
 
                 self.out.release()
                 cv2.destroyAllWindows()
-
-                os.system("ffmpeg -i video.mkv write.mp4")
+                if(key == ord("`")):
+                    os.system("ffmpeg -i video.mkv write.mp4")
                 self.running = False
                 break
+
 
     def stop(self):
         self.running = False
