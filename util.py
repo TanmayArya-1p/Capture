@@ -1,12 +1,22 @@
 import os
 import configparser
 import requests
+import json
 
 class IPNotConfigured(Exception):
     pass
 
 class ConfigFileNotFound(Exception):
     pass
+
+class AutoRepr:
+    def __repr__(self):
+        otpt = ""
+        for i in self.__dict__:
+            otpt = otpt+f'{i}={self.__dict__[i]} ,'
+        return f"{self.name}({otpt[:-2]})"
+
+
 
 def Encode_Ord(s:str):
     otpt = ""

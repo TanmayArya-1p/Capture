@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>736</width>
+    <height>462</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="Screen_Preview">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>691</width>
+      <height>341</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::WinPanel</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="A_Label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>370</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Light</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>A</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::PlainText</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="B_Label">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>0</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Thin</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>B</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Ax_Label">
+    <property name="geometry">
+     <rect>
+      <x>55</x>
+      <y>380</y>
+      <width>21</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Thin</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>A&lt;sub&gt;x&lt;/sub&gt;</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::MarkdownText</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Bx_Label">
+    <property name="geometry">
+     <rect>
+      <x>245</x>
+      <y>380</y>
+      <width>21</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Thin</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>B&lt;sub&gt;x&lt;/sub&gt;</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::MarkdownText</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Refresh">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>390</y>
+      <width>75</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Light</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Refresh</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Ay_Label">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>420</y>
+      <width>31</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Thin</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>A&lt;sub&gt;y&lt;/sub&gt;</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::MarkdownText</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="By_Label_">
+    <property name="geometry">
+     <rect>
+      <x>245</x>
+      <y>420</y>
+      <width>21</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Thin</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>B&lt;sub&gt;y&lt;/sub&gt;</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::MarkdownText</enum>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="Ax_Slider">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>390</y>
+      <width>121</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="Ay_Slider">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>430</y>
+      <width>121</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="Bx_Slider">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>390</y>
+      <width>121</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="By_Slider">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>430</y>
+      <width>121</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Reset">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>390</y>
+      <width>75</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Light</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Reset</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

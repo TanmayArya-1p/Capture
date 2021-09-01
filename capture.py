@@ -14,12 +14,13 @@ class InvalidMode(Exception):
 
 class Recorder:
 
-    def __init__(self,fps:float,res:tuple,codec:str,otpt_file:str , mode:str="STANDARD"):
+    def __init__(self,fps:float,res:tuple,codec:str,otpt_file:str , mode:str="STANDARD" , bbox=None):
         valid_modes = ["STANDARD","GRAYSCALE" , "FASTPACE" , "SLOWPACE"]
         if(not mode in valid_modes):
             raise InvalidMode(f"'{mode}' is an invalid mode. Valid modes are {valid_modes}")
         self.SCREEN_SIZE = res
         self.fps = fps
+        self.bbox=bbox
         self.codec = cv2.VideoWriter_fourcc(*codec)
         self.otpt_file = otpt_file
         if(mode == "STANDARD" ):
@@ -54,7 +55,7 @@ class Recorder:
                 print(iteration)
                 iteration = 0
                 sdt = 0
-            img = ImageGrab.grab()
+            img = ImageGrab.grab(bbox=self.bbox)
 
             if(dt > (1.0/self.fps)):
                 prev = time.time()
